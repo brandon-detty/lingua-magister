@@ -1,9 +1,8 @@
 import { Router } from "express";
 
-const router = Router();
+import repo from "../../repo/textRepo.js";
 
-const repo = new Map<number, string>();
-repo.set(0, "De snelle bruine vos springt over de luie hond heen.");
+const router = Router();
 
 router.get("/text", (_, res) => {
   const id = 0;
