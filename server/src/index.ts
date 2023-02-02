@@ -1,9 +1,8 @@
 import express, { type Request, type Response } from "express";
+import router from "./router.js";
 
 const app = express();
 
-app.get("/", (req: Request, res: Response) => {
-  res.send(`Request received at ${req.url}`);
-});
+app.use(router);
 
 app.listen(8042);
