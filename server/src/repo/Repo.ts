@@ -3,3 +3,7 @@ export interface Repo<K, T> {
   get: (k: K) => T | undefined;
   set: (k: K, v: T) => void;
 }
+
+export interface ListableRepo<K, T> extends Repo<K, T> {
+  list: () => Array<[K, T]>;
+}

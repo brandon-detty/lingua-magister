@@ -3,9 +3,9 @@ import repo from "../../repo/translationRepo.js";
 
 const router = Router();
 
-router.get("/translation", (_, res) => {
-  const word = "vos";
-  const def = repo.get(word) || null;
+router.get("/translation/:str", (req, res) => {
+  const { str } = req.params;
+  const def = repo.get(str) || null;
   res.json(def);
 });
 

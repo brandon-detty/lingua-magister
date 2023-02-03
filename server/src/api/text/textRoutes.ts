@@ -5,8 +5,12 @@ import repo from "../../repo/textRepo.js";
 const router = Router();
 
 router.get("/text", (_, res) => {
-  const id = 0;
-  res.json(repo.get(id));
+  res.json(repo.list());
+});
+
+router.get("/text/:id", (req, res) => {
+  const { id } = req.params;
+  res.json(repo.get(parseInt(id, 10)));
 });
 
 export default router;
