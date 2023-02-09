@@ -1,9 +1,10 @@
+import { Definition, DefinitionList, Word } from "@lingua-magister/types";
 import { Repo } from "./Repo.js";
 
-type Word = string;
-type Definition = string | Array<string>;
-
-const r: Repo<Word, Definition> = new Map<Word, Definition>();
+const r: Repo<Word, Definition | DefinitionList> = new Map<
+  Word,
+  Definition | DefinitionList
+>();
 
 r.set("vos", "fox");
 r.set("springt", "jumps");
