@@ -5,5 +5,5 @@ export interface Repo<K, T> {
 }
 
 export interface ListableRepo<K, T> extends Repo<K, T> {
-  list: () => Array<[K, T]>;
+  list: () => Array<T>;
 }
