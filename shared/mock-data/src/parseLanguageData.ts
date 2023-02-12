@@ -1,8 +1,12 @@
 import { readFileSync } from "fs";
+import { dirname } from "path";
+import { fileURLToPath } from "url";
 
 import { type DefinitionList, type Word } from "@lingua-magister/types";
 
 import type Language from "./Language.js";
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const parseJsonFile = <T>(
   fromLang: Language,
@@ -13,7 +17,10 @@ const parseJsonFile = <T>(
   let data: T;
   try {
     data = JSON.parse(
-      readFileSync(`./${fromLang}-${toLang}/${filename}.json`, "utf8")
+      readFileSync(
+        `${__dirname}/${fromLang}-${toLang}/${filename}.json`,
+        "utf8"
+      )
     );
   } catch {
     data = defaultVal;
