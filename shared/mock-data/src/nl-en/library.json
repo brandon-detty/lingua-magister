@@ -1,4 +1,12 @@
-{
-  "0": "De snelle bruine vos springt over de luie hond heen.",
-  "1": "Midden in de winter zit een koningin voor het raam met een kozijn van zwart ebbenhout, ze is bezig met haar naaiwerk. Buiten dwarrelen sneeuwvlokjes en veertjes naar beneden. De koningin prikt zich aan de naald en er vallen drie druppels bloed in de sneeuw. Dan bedenkt de koningin dat ze graag een kindje zou willen hebben met huid zo wit als sneeuw, lippen zo rood als bloed en haar zo zwart als het ebbenhout. Haar wens gaat in vervulling; enige tijd later bevalt ze van een dochtertje dat ze Sneeuwwitje noemt, omdat het kindje zwarte haren, bloedrode lippen en een sneeuwwitte huid heeft."
-}
+[
+  {
+    "id": 1,
+    "title": "The Quick Brown Fox (Dutch)",
+    "body": "De snelle bruine vos springt over de luie hond heen."
+  },
+  {
+    "id": 2,
+    "title": "Sneeuwwitje",
+    "body": "Midden in de winter zit een koningin voor het raam met een kozijn van zwart ebbenhout, ze is bezig met haar naaiwerk. Buiten dwarrelen sneeuwvlokjes en veertjes naar beneden. De koningin prikt zich aan de naald en er vallen drie druppels bloed in de sneeuw. Dan bedenkt de koningin dat ze graag een kindje zou willen hebben met huid zo wit als sneeuw, lippen zo rood als bloed en haar zo zwart als het ebbenhout. Haar wens gaat in vervulling; enige tijd later bevalt ze van een dochtertje dat ze Sneeuwwitje noemt, omdat het kindje zwarte haren, bloedrode lippen en een sneeuwwitte huid heeft."
+  }
+]
