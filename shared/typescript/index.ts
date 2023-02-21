@@ -6,3 +6,5 @@ export * from "./src/DefinitionList.js";
 export { default as DefinitionList } from "./src/DefinitionList.js";
 export * from "./src/Dictionary.js";
 export { default as Dictionary } from "./src/Dictionary.js";
+export * from "./src/Text.js";
+export { default as Text } from "./src/Text.js";
