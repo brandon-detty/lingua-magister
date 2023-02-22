@@ -1,13 +1,14 @@
 import { env } from "process";
 
 import nlEn from "@lingua-magister/mock-data/nl-en";
+import { LibraryMap, Text } from "@lingua-magister/types";
 
 import { ListableRepo } from "./Repo.js";
 
-const m =
-  env["NODE_ENV"] === "development" ? nlEn.library : new Map<number, string>();
+const m: LibraryMap =
+  env["NODE_ENV"] === "development" ? nlEn.library : new Map();
 
-const r: ListableRepo<number, string> = {
+const r: ListableRepo<Text["id"], Text> = {
   get: m.get.bind(m),
   delete: m.delete,
   list: () => Array.from(m.values()),

@@ -5,7 +5,7 @@ import { Definition, DefinitionList, Word } from "@lingua-magister/types";
 
 import { Repo } from "./Repo.js";
 
-const r: Repo<Word, Definition | DefinitionList> =
+const r: Repo<Word, DefinitionList> =
   env["NODE_ENV"] === "development" ? nlEn.dictionary : new Map();
 
 export default r;
