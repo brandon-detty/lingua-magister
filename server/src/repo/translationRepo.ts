@@ -1,7 +1,7 @@
 import { env } from "process";
 
-import nlEn from "@lingua-magister/mock-data/nl-en";
-import { Definition, DefinitionList, Word } from "@lingua-magister/types";
+import { nlEn } from "@lingua-magister/mock-data";
+import { DefinitionList, Word } from "@lingua-magister/types";
 
 import { Repo } from "./Repo.js";
 

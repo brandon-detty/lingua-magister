@@ -1,6 +1,6 @@
 import { env } from "process";
 
-import nlEn from "@lingua-magister/mock-data/nl-en";
+import { nlEn } from "@lingua-magister/mock-data";
 import { LibraryMap, Text } from "@lingua-magister/types";
 
 import { ListableRepo } from "./Repo.js";

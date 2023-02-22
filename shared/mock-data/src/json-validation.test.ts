@@ -1,22 +1,18 @@
-import Language from "./Language.js";
-import parseLanguageData from "./parseLanguageData.js";
+import validatedLangDataFromJson from "./validatedLangDataFromJson.js";
+
+import nlEnDict from "./nl-en/dictionary.json";
+import nlEnLib from "./nl-en/library.json";
+import badDict from "./bad-test-json/badDictionary.json";
+import badLib from "./bad-test-json/badLibrary.json";
 
 test("if nl-en JSON satisfies interfaces", () => {
-  expect(() => parseLanguageData("nl", "en")).not.toThrow();
-});
-
-it("should fail with non-existent language pairs", () => {
-  expect(() => parseLanguageData("zz" as Language, "ee" as Language)).toThrow();
+  expect(() => validatedLangDataFromJson(nlEnDict, nlEnLib)).not.toThrow();
 });
 
 it("should fail with bad library JSON", () => {
-  expect(() =>
-    parseLanguageData("badLib" as Language, "test" as Language)
-  ).toThrow();
+  expect(() => validatedLangDataFromJson(nlEnDict, badLib)).toThrow();
 });
 
 it("should fail with bad dictionary JSON", () => {
-  expect(() =>
-    parseLanguageData("badDict" as Language, "test" as Language)
-  ).toThrow();
+  expect(() => validatedLangDataFromJson(badDict, nlEnLib)).toThrow();
 });
