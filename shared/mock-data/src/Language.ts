@@ -1,3 +1,3 @@
-type Languages = "nl" | "en";
+type Language = "nl" | "en";
 
-export default Languages;
+export default Language;
