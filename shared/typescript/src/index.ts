@@ -8,3 +8,5 @@ export * from "./Dictionary.js";
 export { default as Dictionary } from "./Dictionary.js";
 export * from "./Text.js";
 export { default as Text } from "./Text.js";
+export * from "./Library.js";
+export { default as Library } from "./Library.js";

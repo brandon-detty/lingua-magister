@@ -1,8 +1,8 @@
-import type { DictionaryMap, Text } from "@lingua-magister/types";
+import type { DictionaryMap, LibraryMap } from "@lingua-magister/types";
 
 interface LanguageData {
   dictionary: DictionaryMap;
-  library: Map<Text["id"], Text>;
+  library: LibraryMap;
 }
 
 export default LanguageData;
