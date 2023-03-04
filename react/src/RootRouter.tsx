@@ -1,11 +1,12 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-import Text from "./views/Text/Text";
-import textLoader from "./views/Text/textLoader";
-import TextList from "./views/TextList";
-
 import RootTemplate from "./RootTemplate";
 import ServerError from "./components/ServerError";
+
+import Text from "./views/Text/Text";
+import textLoader from "./views/Text/textLoader";
+import TextList from "./views/TextList/TextList";
+import textListLoader from "./views/TextList/textListLoader";
 
 const rootRouter = createBrowserRouter([
   {
@@ -13,7 +14,7 @@ const rootRouter = createBrowserRouter([
     element: <RootTemplate />,
     errorElement: <ServerError />,
     children: [
-      { path: "/library", element: <TextList /> },
+      { path: "/library", element: <TextList />, loader: textListLoader },
       { path: "/text/:id", element: <Text />, loader: textLoader },
     ],
   },
