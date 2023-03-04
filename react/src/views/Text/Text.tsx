@@ -6,6 +6,7 @@ import makeRequest from "../../api/makeRequest";
 import splitText from "./splitText";
 import Word from "./Word";
 import fetchDefinition from "../../api/fetchDefnition";
+import PageHeading from "../../components/PageHeading";
 
 export const textLoader: LoaderFunction = async ({ params }) => {
   const text = await makeRequest(`text/${params.id}`);
@@ -25,11 +26,14 @@ const Text = () => {
     <>
       {isText(text) && (
         <>
-          <h3>{text.title}</h3>
-          <div>
-            {words.map((w) => (
-              <Word word={w} handleClick={() => handleWordClick(w)} />
-            ))}
+          <PageHeading>{text.title}</PageHeading>
+          <div className="flex">
+            <div className="grow">
+              {words.map((w) => (
+                <Word word={w} handleClick={() => handleWordClick(w)} />
+              ))}
+            </div>
+            <div className="shrink-0 w-64 bg-slate-300">translation area</div>
           </div>
         </>
       )}
