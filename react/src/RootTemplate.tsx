@@ -1,6 +1,9 @@
 import { Link, Outlet } from "react-router-dom";
 
+import useThemeConfig from "./shared/hooks/useThemeConfig";
+
 const RootTemplate = () => {
+  const t = useThemeConfig();
   return (
     <>
       <div className="container mx-auto max-w-screen-lg bg-white h-screen">
@@ -8,7 +11,7 @@ const RootTemplate = () => {
           <Link to="/">Home</Link>
           <Link to="/library">Library</Link>
         </nav>
-        <div className="p-4">
+        <div className={t.padding.p}>
           <Outlet />
         </div>
       </div>

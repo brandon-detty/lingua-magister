@@ -7,6 +7,7 @@ import splitText from "./splitText";
 import Word from "./Word";
 import fetchDefinition from "../../api/fetchDefnition";
 import PageHeading from "../../components/PageHeading";
+import useThemeConfig from "../../shared/hooks/useThemeConfig";
 
 export const textLoader: LoaderFunction = async ({ params }) => {
   const text = await makeRequest(`text/${params.id}`);
@@ -19,6 +20,8 @@ const handleWordClick = async (w: string) => {
 };
 
 const Text = () => {
+  const t = useThemeConfig();
+
   const text = useLoaderData();
   const words = isText(text) ? splitText(text.body) : ["Loading..."];
 
@@ -28,12 +31,14 @@ const Text = () => {
         <>
           <PageHeading>{text.title}</PageHeading>
           <div className="flex">
-            <div className="grow">
+            <div className={`grow ${t.padding.pr}`}>
               {words.map((w) => (
                 <Word word={w} handleClick={() => handleWordClick(w)} />
               ))}
             </div>
-            <div className="shrink-0 w-64 bg-slate-300">translation area</div>
+            <div className={`shrink-0 w-64 bg-slate-300 ${t.padding.p}`}>
+              translation area
+            </div>
           </div>
         </>
       )}
