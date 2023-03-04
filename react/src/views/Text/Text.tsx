@@ -1,18 +1,12 @@
-import { useLoaderData, type LoaderFunction } from "react-router-dom";
+import { useLoaderData } from "react-router-dom";
 
 import { isText } from "@lingua-magister/types";
 
-import makeRequest from "../../api/makeRequest";
 import splitText from "./splitText";
 import Word from "./Word";
 import fetchDefinition from "../../api/fetchDefnition";
 import PageHeading from "../../components/PageHeading";
 import useThemeConfig from "../../shared/hooks/useThemeConfig";
-
-export const textLoader: LoaderFunction = async ({ params }) => {
-  const text = await makeRequest(`text/${params.id}`);
-  return text;
-};
 
 const handleWordClick = async (w: string) => {
   const t = await fetchDefinition(w);

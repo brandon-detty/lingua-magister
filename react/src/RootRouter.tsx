@@ -1,6 +1,7 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-import Text, { textLoader } from "./views/Text/Text";
+import Text from "./views/Text/Text";
+import textLoader from "./views/Text/textLoader";
 import TextList from "./views/TextList";
 
 import RootTemplate from "./RootTemplate";
